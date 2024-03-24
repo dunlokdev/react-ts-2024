@@ -50,26 +50,38 @@ let user: {
 
 - Cách viết OOP
 
-  ```ts
-  // Cách 1: Sử dụng Type
-  type TUser = {
-    name: string;
-    age: number;
-  };
+```ts
+// Cách 1: Sử dụng Type
+type TUser = {
+  name: string;
+  age: number;
+};
 
-  const user: TUser = {
-    name: "Duong My Loc",
-    age: 20,
-  };
+const user: TUser = {
+  name: "Duong My Loc",
+  age: 20,
+};
 
-  // Cách 2: Sử dụng Interface
-  interface IUser {
-    name: string;
-    age: number;
-  }
+// Cách 2: Sử dụng Interface
+interface IUser {
+  name: string;
+  age: number;
+}
 
-  const user: IUser = {
-    name: "Duong My Loc",
-    age: 20,
-  };
-  ```
+const user: IUser = {
+  name: "Duong My Loc",
+  age: 20,
+};
+```
+
+### Định nghĩa state với Typescript
+
+```ts
+const [state, setState] = useState(value);
+// Thực tế thì TS sẽ tự gán type cho state dựa vào value
+
+// Kiểu chuẩn
+const [state, setState] = useState<string>("");
+
+// Tuy nhiên với biến là kiểu Oebject thì cần phải khai báo type bởi TS không thể tự gán được
+```
