@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Table } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import User from "./User";
 
 export interface IUser {
   name: string;
@@ -74,6 +75,7 @@ const Video10 = () => {
 
   return (
     <div>
+      <User name={name} age={age} city={city} className="mb-5" />
       <div className="d-flex align-items-center justify-content-center">
         <Form onSubmit={handleSubmit} className="container">
           <Form.Group className="mb-3">
